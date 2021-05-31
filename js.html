@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JS tutorial </title>
+	<script type="text/javascript">
+		function myfunction(){
+			document.getElementById('demo').innerHTML=Date()
+
+		}
+	</script>
+</head>
+<body>
+	<button onclick="myfunction()"> CLick me for date </button>
+ <p id="demo"></p>
+
+ <p id="emo1"> it wil change </p>
+ <button onclick="document.getElementById('emo1').style.display='none'"> click </button>
+
+ <p id="id1"></p>
+ <p id="id2"></p>
+ <p id="id3"></p>
+ <p id="id4"></p>
+ <p id="id5"></p>
+ <p id="id6"></p>
+ <script type="text/javascript">
+ 	
+ 	var x,y,z;
+	x=5;
+	y=5;
+	z=x+y;
+	document.getElementById('id2').innerHTML="the value of z is" +z + ".";
+	var txt1= "john";
+	var txt2 = "doe";
+	var txt3 = txt1 + " " + txt2;
+	var z = txt1+5;
+	document.getElementById('id1').innerHTML=txt3+" "+z;
+
+
+	var person = {firstname:"john", lastname:"doe",fullname: function(){
+		return this.firstname + "" + this.lastname;
+	}};
+	document.getElementById('id3').innerHTML = typeof person + typeof true + person.firstname + person.fullname();
+
+	function myfun( p1,p2){
+		return p1*p2;
+	}
+    document.getElementById('id4').innerHTML = myfun(4,3);
+    var txt = "dfhajdhfjadh \"asdfs\" fjah";
+
+    document.getElementById('id5').innerHTML=txt.length + " " + txt + indexOf("as");
+    var a = txt.slice(2,3);
+    var b = txt.substring(5,8);
+    var c =  txt.substr(5,10);
+    var d = txt.replace("asdfs", "replaced");
+    var d = txt.repalce(/asdfs/g,"replace all asdfs")
+   var e = txt.toUpperCase();
+   var f = txt1.concat(" ", txt2);
+   var g = str.split(",");
+
+   var str = "hello";
+   varr arr = str.split("");
+   var tex = "";
+   var i;
+   for(i=0;i < arr.length;i++){
+   	tex += arr[i] + "<br>";
+   }
+    document.getElementById('id6').innerHTML = tex;
+ </script>
+ <button onclick="window.print()"> print </button>
+</body>
+</html>

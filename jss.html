@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> form validation </title>
+</head> 
+<body>
+	<script type="text/javascript">
+			function myfunction(){
+				var a = document.getElementById('demo');
+				if (!a.checkValidity()) {
+					document.getElementById('demo').innerHTML = a.validationMessage;
+
+				}
+				else{
+					document.getElementById('demo').innerHTML = "input is ok"
+
+				}
+
+			}
+			
+	</script>
+
+ <input type="number" name="name" id="demo" min="100" max="300" required>
+			<button onclick="myfunction()">ok</button>
+
+
+
+<p id="dem"></p>	
+<button onclick="loadDoc()" type="button"> change content </button>
+
+<script type="text/javascript">
+	function loadDoc(){
+		var xhttp = XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			if (this.readyState==4 && this.status== 200) {
+				document.getElementById('dem').innerHTML= this.responseText;
+			};
+			xhttp = open("GET","as.txt" , false);
+			xhttp.send();
+		}
+	}
+
+
+</script>		
+
+</body>
+</html>
